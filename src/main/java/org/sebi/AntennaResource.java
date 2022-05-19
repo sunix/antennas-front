@@ -17,6 +17,6 @@ public class AntennaResource {
     @Path("ping")
     @Produces(MediaType.TEXT_PLAIN)
     public String ping(){
-        return ping + "hello";
+        return ping + "hello world";
     }
 }
