@@ -20,6 +20,7 @@
     <jkube.docker.username>epiriouc</jkube.docker.username>
     <jkube.docker.password>E45hgt3ykj7@li8R</jkube.docker.password>
     <jkube.createExternalUrls>true</jkube.createExternalUrls>
+    <jkube.enricher.jkube-controller.pullPolicy>Always</jkube.enricher.jkube-controller.pullPolicy>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -33,6 +34,10 @@
     </dependencies>
   </dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
+    </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-rest-client</artifactId>
