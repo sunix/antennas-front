@@ -15,6 +15,11 @@
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>2.8.2.Final</quarkus.platform.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+    <jkube.build.strategy>jib</jkube.build.strategy>
+    <jkube.generator.name>quay.io/epiriouc/epcrepository</jkube.generator.name>
+    <jkube.docker.username>epiriouc</jkube.docker.username>
+    <jkube.docker.password>E45hgt3ykj7@li8R</jkube.docker.password>
+    <jkube.createExternalUrls>true</jkube.createExternalUrls>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -73,6 +78,11 @@
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.eclipse.jkube</groupId>
+        <artifactId>kubernetes-maven-plugin</artifactId>
+        <version>1.7.0</version>
+      </plugin>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
